@@ -1,0 +1,133 @@
+/* --- Pengaturan Dasar & Font --- */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #121212; /* Latar belakang utama dark mode */
+  color: #e0e0e0; /* Warna teks utama */
+  padding-top: 70px; /* Memberi ruang untuk navbar */
+}
+
+/* --- Variabel Warna Baru --- */
+:root {
+  --bs-primary: #0d6efd; /* Warna Biru Utama */
+  --bs-primary-rgb: 13, 110, 253;
+  --color-dark: #121212;
+  --color-secondary-dark: #1e1e1e; /* Warna untuk card/panel */
+  --color-light-gray: #a0a0a0;
+}
+
+/* --- Tombol & Link Kustom --- */
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  padding: 12px 24px;
+  font-weight: 500;
+}
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+.text-primary {
+  color: var(--bs-primary) !important;
+}
+a {
+  color: var(--bs-primary);
+}
+a:hover {
+  color: #0b5ed7;
+}
+
+/* --- Pengaturan Per Bagian --- */
+.section-padding {
+  padding: 100px 0;
+}
+
+/* --- Navbar Solid (bukan transparan lagi) --- */
+.navbar {
+  background-color: var(--color-secondary-dark) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem 0;
+}
+.navbar .nav-link {
+  color: #fff;
+}
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  color: var(--bs-primary);
+}
+.navbar-brand {
+  color: #fff !important;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  background-color: var(--color-dark);
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 70px); /* Tinggi layar dikurangi tinggi navbar */
+}
+
+/* Style Animasi Mengetik */
+#typing-subtitle::after {
+  content: "|";
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: var(--color-light-gray);
+  }
+}
+
+/* --- Tentang Saya --- */
+#about .lead {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.skill-item {
+  background-color: var(--color-secondary-dark);
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.skill-item:hover {
+  transform: translateY(-5px);
+}
+.skill-item i {
+  font-size: 2.5rem;
+}
+
+/* --- Proyek --- */
+#projects {
+  background-color: var(--color-secondary-dark);
+}
+.card {
+  background-color: #2a2a2a;
+  border: 1px solid #333;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.card-title {
+  color: #fff;
+}
+
+/* --- Kontak & Footer --- */
+.social-icons a {
+  color: #e0e0e0;
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: var(--bs-primary);
+}
+footer {
+  background-color: var(--color-secondary-dark);
+  padding: 20px 0;
+}
