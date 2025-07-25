@@ -1,6 +1,7 @@
 /* --- Pengaturan Dasar & Font --- */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 70px;
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -85,9 +86,15 @@ a:hover {
 }
 
 /* --- Tentang Saya --- */
-#about .lead {
-  font-size: 1.25rem;
-  font-weight: 400;
+#about {
+  min-height: calc(100vh - 70px); /* 70px adalah perkiraan tinggi navbar */
+  display: flex; /* Mengaktifkan flexbox */
+  align-items: center; /* Membuat konten berada di tengah secara vertikal */
+  padding: 80px 0; /* Memberi padding atas & bawah */
+}
+#about .align-items-center .col-lg-5 img {
+  max-width: 70%; /* Mengurangi lebar maksimum gambar */
+  height: auto; /* Biarkan tinggi menyesuaikan aspek rasio */
 }
 .skill-item {
   background-color: var(--color-secondary-dark);
@@ -127,6 +134,50 @@ a:hover {
 .social-icons a:hover {
   color: var(--bs-primary);
 }
+
+/* --- Tombol Back to Top --- */
+#back-to-top {
+  position: fixed;
+  bottom: 25px; /* Sedikit disesuaikan untuk tombol yang lebih besar */
+  right: 25px; /* Sedikit disesuaikan untuk tombol yang lebih besar */
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  width: 50px; /* Diubah menjadi 50px */
+  height: 50px; /* Diubah menjadi 50px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem; /* Disesuaikan agar ikon proporsional */
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid #333;
+  background-color: var(--color-secondary-dark);
+  color: var(--bs-primary);
+  transition: all 0.3s ease-in-out;
+}
+
+#back-to-top:hover {
+  background-color: var(--bs-primary); /* Background jadi biru saat disentuh */
+  color: #fff; /* Ikon jadi putih saat disentuh */
+  border-color: var(--bs-primary);
+}
+
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Style untuk ikon di dalam tombol */
+#back-to-top i {
+  margin-bottom: 0 !important; /* Hapus margin default ikon */
+}
+
 footer {
   background-color: var(--color-secondary-dark);
   padding: 20px 0;
