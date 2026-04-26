@@ -1,0 +1,1 @@
+[2026-04-27] DECISION: Started personal project — Azriel Portfolio | REASONING: Personal portfolio to position Azriel as the founder behind Rielcode and showcase past client work | CONTEXT: Type: portfolio site, Stack: PHP + Bootstrap 5.3.8, Deadline: open-ended
