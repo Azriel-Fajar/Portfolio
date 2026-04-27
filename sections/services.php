@@ -25,7 +25,7 @@
                 </div>
 
                 <div style="margin-top: var(--space-6); display:flex; flex-wrap:wrap; gap:var(--space-3);">
-                    <a href="https://rielcode.com/package.php" target="_blank" rel="noopener" class="btn-primary">
+                    <a href="https://rielcode.com/#packages" target="_blank" rel="noopener" class="btn-primary">
                         See packages
                         <i class="bi bi-arrow-up-right"></i>
                     </a>
