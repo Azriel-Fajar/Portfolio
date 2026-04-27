@@ -1,6 +1,6 @@
 <section class="section" id="services">
     <div class="container-x">
-        <div class="section-head" data-aos="fade-up">
+        <div class="section-head" data-reveal="up">
             <span class="eyebrow">// 03 — Services</span>
             <h2 class="section-title">Need a website? That's what Rielcode is for.</h2>
             <p class="section-desc">
@@ -8,7 +8,7 @@
             </p>
         </div>
 
-        <div class="services-card" data-aos="fade-up">
+        <div class="services-card" data-reveal="up" data-reveal-delay="1">
             <div>
                 <h3 style="font-family:var(--font-display); font-weight:700; font-size:clamp(1.4rem,2vw,1.8rem); color:var(--ink-100); letter-spacing:var(--tracking-snug);">
                     Four tiers, one promise: <span class="gradient-text">Real Code. Real Results.</span>

@@ -18,7 +18,23 @@ const targets = [
 const outRoot = process.cwd();
 fs.mkdirSync(path.join(outRoot, "IMG", "projects"), { recursive: true });
 
+// Reuse the system Chrome (avoids puppeteer's bundled-Chrome download).
+const SYSTEM_CHROME_CANDIDATES = [
+  process.env.PUPPETEER_EXECUTABLE_PATH,
+  "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+  "C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe",
+].filter(Boolean);
+const executablePath = SYSTEM_CHROME_CANDIDATES.find((p) => fs.existsSync(p));
+if (!executablePath) {
+  console.error(
+    "Could not find a system Chrome/Edge install. Set PUPPETEER_EXECUTABLE_PATH to your browser .exe."
+  );
+  process.exit(1);
+}
+
 const browser = await puppeteer.launch({
+  executablePath,
   headless: "new",
   defaultViewport: { width: 1440, height: 900, deviceScaleFactor: 1 },
 });

@@ -44,7 +44,7 @@ $projects = [
 ?>
 <section class="section" id="projects">
     <div class="container-x">
-        <div class="section-head" data-aos="fade-up">
+        <div class="section-head" data-reveal="up">
             <span class="eyebrow">// 04 — Selected Work</span>
             <h2 class="section-title">Past clients of Rielcode.</h2>
             <p class="section-desc">
@@ -54,7 +54,7 @@ $projects = [
 
         <div class="projects-grid">
             <?php foreach ($projects as $i => $p): ?>
-                <article class="project-card" data-aos="fade-up" data-aos-delay="<?= $i * 70 ?>">
+                <article class="project-card" data-reveal="up" data-reveal-delay="<?= min($i + 1, 6) ?>" data-tilt>
                     <div class="project-thumb">
                         <span class="badge"><?= htmlspecialchars($p['badge']) ?></span>
                         <img src="<?= htmlspecialchars($p['thumb']) ?>"

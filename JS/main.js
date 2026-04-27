@@ -1,23 +1,11 @@
 /* ============================================================
    Azriel Portfolio — main.js
-   Handles: AOS init, scrolled-nav state, mobile nav toggle,
-            smooth-scroll polish.
+   Handles: scrolled-nav state, mobile nav toggle, footer year.
+   Reveal/parallax/tilt/counters live in JS/animations.js.
    ============================================================ */
 
 (function () {
   "use strict";
-
-  // -------- AOS init (matches Rielcode pattern) --------
-  function initAOS() {
-    if (typeof window.AOS === "undefined") return;
-    window.AOS.init({
-      duration: 700,
-      easing: "ease-out-cubic",
-      once: true,
-      offset: 60,
-      disable: window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    });
-  }
 
   // -------- Navbar scrolled state --------
   function initNavScroll() {
@@ -85,11 +73,5 @@
     initNavScroll();
     initMobileNav();
     initYear();
-    // AOS script is loaded with no defer — initialize once it's available
-    if (typeof window.AOS !== "undefined") {
-      initAOS();
-    } else {
-      window.addEventListener("load", initAOS);
-    }
   }
 })();

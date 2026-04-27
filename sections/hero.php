@@ -1,6 +1,6 @@
 <section class="hero" id="hero">
     <div class="hero-grid">
-        <div class="hero-copy" data-aos="fade-up" data-aos-duration="700">
+        <div class="hero-copy" data-reveal="up">
             <span class="hero-eyebrow">
                 <span class="dot"></span>
                 Available for new projects · 2026
@@ -46,15 +46,15 @@
             </div>
         </div>
 
-        <div class="hero-portrait" data-aos="fade-left" data-aos-duration="800" data-aos-delay="120">
-            <div class="ring" aria-hidden="true"></div>
-            <div class="frame">
+        <div class="hero-portrait" data-reveal="left" data-reveal-delay="2">
+            <div class="ring" aria-hidden="true" data-parallax="-0.18"></div>
+            <div class="frame" data-parallax="0.08">
                 <img src="IMG/azriel.jpeg" alt="Portrait of Azriel">
             </div>
-            <div class="code-chip" aria-hidden="true">
+            <div class="code-chip" aria-hidden="true" data-parallax="0.32">
                 <span class="key">role</span>: <span class="str">"founder"</span>
             </div>
-            <div class="badge">
+            <div class="badge" data-parallax="-0.22">
                 <i class="bi bi-stars"></i>
                 Real Code. Real Results.
             </div>

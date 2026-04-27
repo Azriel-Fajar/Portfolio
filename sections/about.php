@@ -1,7 +1,7 @@
 <section class="section" id="about">
     <div class="container-x">
         <div class="about-grid">
-            <div class="about-copy" data-aos="fade-up">
+            <div class="about-copy" data-reveal="up">
                 <div class="section-head" style="margin-bottom: var(--space-5);">
                     <span class="eyebrow">// 01 — About</span>
                     <h2 class="section-title">The person behind the studio.</h2>
@@ -17,25 +17,25 @@
                 </p>
             </div>
 
-            <div data-aos="fade-up" data-aos-delay="120">
+            <div data-reveal="up" data-reveal-delay="2">
                 <div class="section-head" style="margin-bottom: var(--space-5);">
                     <span class="eyebrow">// By the numbers</span>
                 </div>
                 <div class="stat-grid">
                     <div class="stat-card">
-                        <div class="num">3+</div>
+                        <div class="num" data-counter>3+</div>
                         <div class="label">Years writing code</div>
                     </div>
                     <div class="stat-card">
-                        <div class="num">5+</div>
+                        <div class="num" data-counter>5+</div>
                         <div class="label">Sites shipped</div>
                     </div>
                     <div class="stat-card">
-                        <div class="num">4</div>
+                        <div class="num" data-counter>4</div>
                         <div class="label">Active clients</div>
                     </div>
                     <div class="stat-card">
-                        <div class="num">100%</div>
+                        <div class="num" data-counter>100%</div>
                         <div class="label">Built with care</div>
                     </div>
                 </div>

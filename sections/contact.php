@@ -1,6 +1,6 @@
 <section class="section" id="contact">
     <div class="container-x">
-        <div class="contact-shell" data-aos="fade-up">
+        <div class="contact-shell" data-reveal="up">
             <span class="eyebrow" style="justify-content:center;">// 05 — Contact</span>
             <h2 class="contact-title" style="margin-top: var(--space-3);">
                 Got something to build? <br>
