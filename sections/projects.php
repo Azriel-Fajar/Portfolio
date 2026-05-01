@@ -6,7 +6,7 @@ $projects = [
         'summary' => 'A full event platform for the largest information technology competition at FTI UKSW — registrations, categories, and the winner showcase.',
         'tags'    => ['PHP', 'MySQL', 'Bootstrap'],
         'thumb'   => 'IMG/projects/fit.png',
-        'link'    => 'https://fit2026.rielcode.com',
+        'link'    => 'https://fti.uksw.edu/fit2026',
     ],
     [
         'badge'   => 'Education',
