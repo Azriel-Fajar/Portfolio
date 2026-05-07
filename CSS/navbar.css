@@ -91,6 +91,7 @@
     background var(--dur-1) var(--ease-soft);
 }
 .nav-links a:hover { color: var(--ink-100); background: var(--surface-3); }
+.nav-links a.is-active { color: var(--accent-end); background: rgba(6,182,212,0.08); }
 .nav-links a .num {
   font-family: var(--font-mono);
   font-size: 0.7rem;

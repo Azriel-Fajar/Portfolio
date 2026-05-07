@@ -63,6 +63,34 @@
     if (el) el.textContent = String(new Date().getFullYear());
   }
 
+  // -------- Scroll-spy: highlight active nav link --------
+  function initScrollSpy() {
+    const navLinks = document.querySelectorAll(".nav-links a[href^='#']");
+    if (!navLinks.length || !("IntersectionObserver" in window)) return;
+
+    const sectionIds = Array.from(navLinks).map((a) => a.getAttribute("href").slice(1));
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+
+    function setActive(id) {
+      navLinks.forEach((a) => {
+        a.classList.toggle("is-active", a.getAttribute("href") === "#" + id);
+      });
+    }
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+    );
+
+    sections.forEach((s) => io.observe(s));
+  }
+
   // -------- Boot --------
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", boot);
@@ -72,6 +100,7 @@
   function boot() {
     initNavScroll();
     initMobileNav();
+    initScrollSpy();
     initYear();
   }
 })();
